@@ -22,7 +22,15 @@ require('dotenv').config();
 
 app.locals.moment = require ("moment");
 
-mongoose.connect("mongodb://localhost/btm",{useNewUrlParser: true }).then(() => console.log('MongoDB Connected...')) ;
+
+mongoose.connect(process.env.DB_URL,{
+ useNewUrlParser: true ,
+ useCreateIndex: true
+}).then(() => {
+	console.log('DB Connected...');
+}).catch(err => {
+	console.log("ERROR:", err.message);
+}) ;
 
 app.use(bodyParser.urlencoded({extended: true}));
 
