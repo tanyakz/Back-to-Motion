@@ -24,8 +24,7 @@ app.locals.moment = require ("moment");
 
 
 mongoose.connect(process.env.DB_URL,{
- useNewUrlParser: true ,
- useCreateIndex: true
+ useNewUrlParser: true
 }).then(() => {
 	console.log('DB Connected...');
 }).catch(err => {
