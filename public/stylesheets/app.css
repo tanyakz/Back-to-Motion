@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+#container {
+  	min-height:100%;
+}
+
+
+#main{
+	overflow: auto;
+	padding-bottom: 100px;
+}
+
+.card img{
+	width:100%;
+}
+
+.delete_form{
+	display: inline;
+}
+
+#service-header{
+	margin-bottom: 0;
+	font-size: 1.2rem;
+	background-color: #343a40;
+}
+
+
+li.list-group-item .list-service a:link{
+	background-color: white;
+	color:#343a40;
+	border-radius: 0 !important;
+	text-decoration: none;
+}
+
+
+
+.border-left{
+	border-width: thick !important;
+	border-color:#6e1f4f !important;
+}
+
+a{
+	color:white;
+	text-decoration:none;
+}
+a:hover{
+	color:grey;
+	text-decoration:none;
+}
+
+.list-group-item, .list-service  a:hover {
+	background-color: #6e1f4f;
+	color:white !important;
+	border-radius: 0 !important;
+	text-decoration: none !important;
+}
+
+.btn-dark {
+    color: #fff;
+    background-color: #6e1f4f;
+    border-color: #6e1f4f;
+}
+
+.btn-dark:hover {
+    color: #fff;
+    background-color: #23272b;
+    border-color: #1d2124;
+}
+
+#commentTime{
+	color: grey;
+	font-style: italic;
+	font-size: 0.7rem;
+}
+
+#footer{
+	
+	margin-top:-50px;
+	padding :40px 30px 30px 30px;
+	margin-bottom: 0;
+	
+	background-color: #343a40;
+	color: white;
+	
+	position: relative;
+	clear:both;
+}
+
+.footer{
+	padding :20px;
+	margin-bottom: 0;
+}
+
+.form-center{
+	margin-top:120px;
+	margin-bottom:0;
+}
+
+#forgot-link{
+	
+	color: #6e1f4f;
+}

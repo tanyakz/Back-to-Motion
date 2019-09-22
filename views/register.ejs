@@ -1,0 +1,40 @@
+<% include ./partials/header%>
+<div class="container form-center">
+	
+	<center><h1>Register Here</h1></center>
+	<div class="row">
+		<div style="width:40%; margin: 20px auto;">
+			<form action="/register" method="POST">
+				<div class="form-group">
+	<input class="form-control" type="text" name="username" placeholder="username">
+				</div>
+				<div class="form-group">
+	<input class="form-control" type="text" name="firstName" placeholder="First Name">
+				</div>
+				<div class="form-group">
+	<input class="form-control" type="text" name="lastName" placeholder="last Name">
+				</div>
+				<div class="form-group">
+	<input class="form-control" type="password" name="password" placeholder="password">
+				</div>
+				<div class="form-group">
+					<input type="email" name="email" placeholder="Your email address" class="form-control">
+				</div>
+				<div class="form-group">
+					<input type="text" name="avatar" placeholder="Avatar url" class="form-control">
+				</div>
+				<div class="form-group">
+									
+	<input class="form-control" type="text" name="adminCode" placeholder="Admin code"> 
+				</div>
+ 	<button class="btn btn-lg btn-dark btn-block">
+		Sign Up
+	</button>
+	
+</form>
+		</div>
+	</div>
+</div>
+
+
+<% include ./partials/footer%>

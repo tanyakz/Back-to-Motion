@@ -1,0 +1,70 @@
+<% include ../partials/header%>
+
+
+<div class="container">
+	<header class="jumbotron">
+		<h1 class="text-uppercase">
+		We can help you get back to motion!
+	</h1>
+		<p class="text-muted">We have experts in treatment of wide variety of physical conditions such as work related injuries, MVA, sport injuries, etc.</p>
+		<p class="text-muted float-right font-italic">
+			<%= data.city.name %> weather: <%= data.list[0].main.temp %> &#176; C
+		</p>
+		<p>
+		<% if(currentUser && currentUser.isAdmin){ %>
+			<a class="btn btn-primary btn-md" href="/services/new">Add new service</a>
+			<% } %>
+		</p>
+		
+		
+	</header>
+	<div class="row">
+		<div>
+			
+		</div>
+		<div class="col-md-12 text-center" style="display-flex; flex-wrap:wrap;">
+			
+			<% if(noMatch !== null){ %>
+			 <h3>
+				 <%= noMatch %>
+			</h3>
+			
+			<p>
+				<form class="form-inline my-2 my-lg-0 center" action="/services" method="GET">
+					 <input class="form-control mr-sm-2" name="search" type="text" placeholder="Service Search ...">
+					<button class="btn btn-dark my-2 my-sm-0" type="submit">Search</button>
+				</form>
+			</p>
+			
+			<% } %>
+			
+			<!-- <h3>
+				Check out our services
+			</h3> -->
+		</div>
+	</div>
+	<div class="row mt-3" style="display:flex; flex-wrap: wrap;">
+		<% services.forEach(function(service){ %>
+		<div class="col-md-4 col-sm-6">
+			<div class="card ">
+			  <img src="<%=service.image %>" class="card-img-top" alt="<%= service.title %>">
+				  <div class="card-body">
+					<h5 class="card-title"><%= service.title %></h5>
+					<!-- <p class="card-text"><%=service.description %></p> -->
+					<a href="/services/<%=service._id %>" class="btn btn-dark">More details</a>
+				  </div>
+			</div>
+			
+
+		</div>
+
+		<% }); %>
+		
+	</div>
+	
+
+	
+	
+	</div>
+
+<% include ../partials/footer%>

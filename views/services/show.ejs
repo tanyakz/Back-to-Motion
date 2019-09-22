@@ -1,0 +1,71 @@
+<% include ../partials/header%>
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-3 mt-4">
+			<p class="p-2 text-white lead" id="service-header">
+				Our Services
+			</p>
+			<div class="list-group">
+				<% services.forEach(function(service){ %>
+				  <div>
+					 <li class="list-group-item "><a href="/services/<%=service._id %>"><%=service.title %></a></li>
+				</div>
+				<% });%>
+			</div>
+		</div>
+		<div class="col-md-9">
+			<div class="card">
+				<img class="img-responsive" src="<%=service.image %>" alt="<%=service.title %>">
+				<div class="card-body">
+					<h4 class="card-title"> <span class="border-left-0 border border-left"></span> <strong>&nbsp; <%= service.title %></strong></h4>
+					
+					<p class="card-text"><%=service.description %></p>
+					
+					<% if(currentUser && currentUser.isAdmin){ %>
+					<a class="btn btn-sm btn-warning" href="/services/<%=service._id %>/edit">Edit</a>
+					<form class="delete_form" action="/services/<%=service._id%>?_method=DELETE" method="POST">
+					<button class="btn btn-sm btn-danger">
+						Delete
+						</button>	
+						
+					</form>
+					<% } %>
+					 </div>
+			</div>
+			
+			<div class="card bg-light p-3">
+				<div class="ml-auto">
+					<a class="btn btn-dark" href="/services/<%=service._id %>/comments/new">Add New Comment</a>
+				</div>
+				<hr>
+					<% service.comments.forEach(function(comment){ %>
+				<div class="row">
+					<div class="col-md-12">
+						<strong><%=comment.author.username %></strong>
+						<span id="commentTime" class="float-right"><%=moment(comment.createdAt).fromNow() %></span>
+						<p>
+		<%=comment.text %>
+</p>
+						<%if (currentUser && comment.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){%>
+						<a class="btn btn-warning btn-sm" href="/services/<%=service._id %>/comments/<%=comment._id %>/edit">Edit</a>
+						<form class="delete_form"  action="/services/<%=service.id%>/comments/<%=comment._id%>?_method=DELETE" method="POST">
+							<input type="submit" class="btn btn-sm btn-danger" value="Delete">
+						</form>
+						<% }%>
+					</div>
+				</div>
+				 
+	 	
+	<% }); %>
+
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+
+
+<% include ../partials/footer%>

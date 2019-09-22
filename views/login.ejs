@@ -1,0 +1,30 @@
+<% include ./partials/header%>
+
+
+<div class="container form-center" >
+	<center>
+	<h1>
+	Login Form
+	</h1>
+		</center>
+	<div class="row">
+		<div style="width:40%; margin: 20px auto;">	
+
+			<form action="/login" method="POST">
+				<div class="form-group">
+					<input class="form-control" type="text" name="username" placeholder="username">
+				</div>
+				<div class="form-group">
+					<input class="form-control" type="password" name="password" placeholder="password">
+				</div>
+				<button  class="btn btn-lg btn-dark btn-block">Login</button>
+			</form>
+			<p>
+		<a id="forgot-link" href="/forgot">*Forgot Password</a>
+	</p>
+		</div>
+	</div>
+	
+</div>
+
+<% include ./partials/footer%>
