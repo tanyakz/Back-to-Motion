@@ -24,7 +24,8 @@ app.locals.moment = require ("moment");
 
 
 mongoose.connect(process.env.DB_URL,{
- useNewUrlParser: true
+ useNewUrlParser: true,
+	useCreatedIndex: true
 }).then(() => {
 	console.log('DB Connected...');
 }).catch(err => {
@@ -41,7 +42,7 @@ app.use(flash());
 
 // PASSPORT CONFIG	
 app.use(require("express-session")({
-	secret: "Kick pain to the curb and get back to motion@123@",
+	secret: process.env.SECRET_CODE,
 	resave: false,
 	saveUninitialized: false
 }));
