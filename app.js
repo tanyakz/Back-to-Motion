@@ -23,7 +23,7 @@ require('dotenv').config();
 app.locals.moment = require ("moment");
 
 
-mongoose.connect("mongodb+srv://tanya:tantan1231@@cluster0-l0sqj.mongodb.net/test?retryWrites=true&w=majority",{
+mongoose.connect(DB_URL,{
  useNewUrlParser: true,
 	useCreatedIndex: true,
 	 useUnifiedTopology: true
