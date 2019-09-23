@@ -23,7 +23,7 @@ require('dotenv').config();
 app.locals.moment = require ("moment");
 
 
-mongoose.connect(DB_URL,{
+mongoose.connect(process.env.DB_URL,{
  useNewUrlParser: true,
 	useCreatedIndex: true,
 	 useUnifiedTopology: true
