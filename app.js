@@ -25,12 +25,15 @@ app.locals.moment = require ("moment");
 
 mongoose.connect(process.env.DB_URL,{
  useNewUrlParser: true,
-	useCreatedIndex: true
+	useCreatedIndex: true,
+	 useUnifiedTopology: true
 }).then(() => {
 	console.log('DB Connected...');
 }).catch(err => {
 	console.log("ERROR:", err.message);
 }) ;
+
+mongoose.set('useCreateIndex', true);
 
 app.use(bodyParser.urlencoded({extended: true}));
 
