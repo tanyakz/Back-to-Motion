@@ -10,7 +10,8 @@ var express               = require ("express"),
     Comment               = require("./models/comment"),
 	User                  = require("./models/user"),
 	request				  = require("request"),
-	flash 				  = require("connect-flash");
+	flash 				  = require("connect-flash"),
+	seedDB      		  = require("./seeds");
 
 	
 // requiring routes
@@ -42,6 +43,7 @@ app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
 app.use(flash());
 
+ seedDB(); //seed the database
 
 // PASSPORT CONFIG	
 app.use(require("express-session")({
