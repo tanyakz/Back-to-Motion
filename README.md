@@ -3,7 +3,7 @@
 <ul>
         <li> Used NodeJS to write server-side JavaScript</li>
         <li> Express and MongoDB DataBase</li>
-        <li> REATFUL Routing</li>
+        <li> RESTFUL Routing</li>
         <li> Authentication</li>
         <li> Authorization</li>
         <li> Creating Models</li>
