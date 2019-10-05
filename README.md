@@ -2,7 +2,7 @@
 
 <ul>
         <li> Used NodeJS to write server-side JavaScript</li>
-        <li> Use Express and MongoDB DataBase</li>
+        <li> Express and MongoDB DataBase</li>
         <li> REATFUL Routing</li>
         <li> Authentication</li>
         <li> Authorization</li>
