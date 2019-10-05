@@ -1,10 +1,12 @@
 # Back-to-Motion
 
->> Used NodeJS to write server-side JavaScript
->> Use Express and MongoDB DataBase
->> REATFUL Routing
->> Authentication
->> Authorization
->> Creating Models
->> Weather API
->> Used Bootstrap for UI Improvement
+<ul>
+        <li> Used NodeJS to write server-side JavaScript</li>
+        <li> Use Express and MongoDB DataBase</li>
+        <li> REATFUL Routing</li>
+        <li> Authentication</li>
+        <li> Authorization</li>
+        <li> Creating Models</li>
+        <li> Weather API</li>
+        <li> Used Bootstrap for UI Improvement</li>
+</ul>
